@@ -43,6 +43,8 @@ app.use(express.json());
 // Routes
 app.use('/api/users', userRoutes);
 
+app.use('/api', userRoutes);
+
 // Default Route for unmatched paths
 app.use((req, res) => {
   res.status(404).json({ message: 'Route not found' });
